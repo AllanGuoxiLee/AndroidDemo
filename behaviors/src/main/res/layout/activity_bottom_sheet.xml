@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/rootView"
+    tools:context="com.liguoxi.behaviors.BottomSheetActivity">
+
+    <FrameLayout
+        android:id="@+id/container_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_behavior="@string/first_behavior">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/transparent"
+            app:layout_collapseMode="pin"
+            android:visibility="gone"
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/expanded_appbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tag="modal-appbar"
+        android:background="@color/transparent"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_behavior="@string/second_behavior">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/expanded_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primaryTransparent"
+            app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_bottom_sheet" />
+
+</android.support.design.widget.CoordinatorLayout>
