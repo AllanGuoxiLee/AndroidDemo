@@ -1,1 +1,1 @@
-include ':sample', ':recyclerViewAdapter', ':behaviors'
+include ':sample', ':recyclerViewAdapter', ':behaviors', ':imagepicker'
