@@ -9,6 +9,7 @@ import android.view.View;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.liguoxi.androiddemo.R;
+import com.liguoxi.androiddemo.UI.acitivities.ImageSettingActivity;
 import com.liguoxi.androiddemo.UI.acitivities.MapBottomSheetActivity;
 import com.liguoxi.androiddemo.entity.IndexEntity;
 
@@ -39,6 +40,7 @@ public class MainActivity extends BaseActivity {
     private void initData() {
         List<IndexEntity> indexList = new ArrayList<>();
         indexList.add(new IndexEntity("Map Bottom Sheet Activity", MapBottomSheetActivity.class));
+        indexList.add(new IndexEntity("Image Setting Activity", ImageSettingActivity.class));
         mAdapter.setNewData(indexList);
 
     }
@@ -48,9 +50,9 @@ public class MainActivity extends BaseActivity {
             @Override
             protected void convert(BaseViewHolder helper, final IndexEntity item) {
                 helper.setText(R.id.title_tv, item.getTitle());
-                if (item.getSubTitle()!=null&&item.getSubTitle().length()>0){
+                if (item.getSubTitle() != null && item.getSubTitle().length() > 0) {
                     helper.setText(R.id.subTitle_tv, item.getSubTitle());
-                }else {
+                } else {
                     helper.getView(R.id.subTitle_tv).setVisibility(View.GONE);
                 }
                 helper.getConvertView().setOnClickListener(new View.OnClickListener() {

@@ -30,12 +30,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
             android:permission="android.permission.BAIDU_LOCATION_SERVICE"
             android:process=":remote" />
-        <activity android:name=".UI.acitivities.MapBottomSheetActivity"></activity>
+
+        <activity android:name=".UI.acitivities.MapBottomSheetActivity" />
+        <activity android:name=".UI.acitivities.ImageSettingActivity" />
+        <activity android:name=".UI.acitivities.GridPhotoSelectActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="75dp"
+    android:layout_height="75dp">
+
+    <ImageView
+        android:id="@+id/photo_container"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        />
+
+    <RelativeLayout
+        android:id="@+id/edit_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/photo_container"
+        android:layout_alignLeft="@+id/photo_container"
+        android:layout_alignRight="@+id/photo_container"
+        android:layout_alignTop="@+id/photo_container"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/alpha_black" />
+
+        <ImageView
+            android:id="@+id/select_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ic_assignment_turned_in_white" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/add_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/photo_container"
+        android:layout_alignLeft="@+id/photo_container"
+        android:layout_alignRight="@+id/photo_container"
+        android:layout_alignTop="@+id/photo_container"
+        android:src="@mipmap/ic_note_add_grey"
+        android:visibility="gone" />
+
+</RelativeLayout>
